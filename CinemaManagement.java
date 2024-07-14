@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class CinemaManagement {
-    private static final int ROWS=3;
-    private static final int[] SEAT_PER_ROW = {16};
-    private static final char[][] seats = new char[ROWS][];
+
 
 
     public static void main(String[]args) {
@@ -11,41 +9,60 @@ public class CinemaManagement {
 
 
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+
             System.out.println("------------------------------------------------------------------------------------------");
             System.out.println("Please select an option:");
-            System.out.println("\t1)    1) Buy a ticket");
-            System.out.println("\t2)    2) Cancel ticket");
-            System.out.println("\t2)    3) See seating plan");
-            System.out.println("\t3)    4) Find First available");
-            System.out.println("\t5)    5) Print tickets information and total price");
-            System.out.println("\t6)    6) Search ticket");
-            System.out.println("\t7)    7) Sort ticket by price");
-            System.out.println("\t8)    8) Exit");
+            System.out.println("\t1)    Buy a ticket");
+            System.out.println("\t2)    Cancel ticket");
+            System.out.println("\t2)    See seating plan");
+            System.out.println("\t3)    Find First available");
+            System.out.println("\t5)    Print tickets information and total price");
+            System.out.println("\t6)    Search ticket");
+            System.out.println("\t7)    Sort ticket by price");
+            System.out.println("\t8)    Exit");
             System.out.println("------------------------------------------------------------------------------------------");
             System.out.println("Select option:");
             int choice = scanner.nextInt();
 
-            switch (choice) {
-                case 1:
-                    buySeat(scanner);
-                    break;
-                case 2:
-                    cancelSeat(scanner);
-                    break;
-                case 3:
-                    findFirstAvailable();
-                    break;
-                case 4:
-                    showSeatingPlan();
-                    break;
-                case 5:
-                    System.out.println("Exiting...");
-                    return;
-                default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+            while (true) {
+
+                switch (choice) {
+                    case 1:
+                        buy_seat();
+                        break;
+                    case 2:
+                        cancel_seat();
+                        break;
+                    case 3:
+                        find_first_available();
+                        break;
+                    case 4:
+                        show_seating_plan();
+                        break;
+                    case 5:
+                        print_tickets_info();
+                        break;
+                    case 6:
+                        search_ticket();
+                        break;
+                    case 7:
+                        sort_ticket();
+                        break;
+
+                    case 8:
+                        System.out.println("Terminating Program.Have a great day");
+                        return;
+                    default:
+                        System.out.println("Invalid choice. Please enter a number between 1 and 8.");
+                }
             }
-        }
     }
+    private static void buy_seat() {}
+    private static void cancel_seat(){}
+    private static void find_first_available(){}
+    private static void show_seating_plan(){}
+    private static void print_tickets_info(){}
+    private static void search_ticket(){}
+    private static void sort_ticket(){}
 
 }
